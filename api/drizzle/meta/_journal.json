@@ -15,6 +15,13 @@
       "when": 1733214920200,
       "tag": "0001_messy_energizer",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1733313606874,
+      "tag": "0002_wild_switch",
+      "breakpoints": true
     }
   ]
 }
