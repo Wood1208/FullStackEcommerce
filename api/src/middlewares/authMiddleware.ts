@@ -2,9 +2,10 @@ import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
 export function verifyToken(req: Request, res: Response, next: NextFunction) {
-  const token = req.header('Authorization');
+  const token = req.header('Authorization')?.replace('Bearer ', '');
 
   if(!token) {
+    console.log("not token");
     res.status(401).json({ error: 'Access denied' });
     return;
   }
@@ -20,6 +21,7 @@ export function verifyToken(req: Request, res: Response, next: NextFunction) {
     req.role = decoded.role;
     next();
   } catch(err) {
+    console.error("JWT verification error:", err);
     res.status(401).json({ error: 'Access denied' });
   }
 }
@@ -28,6 +30,7 @@ export function verifySeller(req: Request, res: Response, next: NextFunction) {
   const role = req.role;
 
   if(role !== 'seller') {
+    console.log("not a seller");
     res.status(401).json({ error: 'Access denied' });
     return;
   }

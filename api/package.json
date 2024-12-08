@@ -15,8 +15,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.36.4",
+    "drizzle-zod": "^0.5.1",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
