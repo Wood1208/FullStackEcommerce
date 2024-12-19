@@ -22,6 +22,13 @@
       "when": 1733313606874,
       "tag": "0002_wild_switch",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1733646720519,
+      "tag": "0003_petite_black_panther",
+      "breakpoints": true
     }
   ]
 }
