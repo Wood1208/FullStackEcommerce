@@ -30,7 +30,9 @@ router.post('/register', validateData(createUserSchema), async (req, res) => {
 
     res.status(201).json({ user, token });
   } catch(err) {
-    res.status(500).send('Something went wrong');
+    console.error(err); // 可选：记录错误信息
+    // @ts-ignore
+    res.status(500).json({ error: 'Something went wrong', message: err.message || 'Unknown error' });
   }
 })
 
